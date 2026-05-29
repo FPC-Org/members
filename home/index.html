@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FPC Research Summaries</title>
+  <meta
+    name="description"
+    content="Forest Productivity Cooperative research summaries and report access."
+  >
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
+  <style>
+    :root {
+      --forest-deep: #143927;
+      --forest: #24543a;
+      --forest-soft: #dfeadd;
+      --sand: #f7f4ec;
+      --ink: #1d2a1f;
+      --maroon: #730000;
+      --maroon-deep: #4e0000;
+      --card: rgba(255, 255, 255, 0.92);
+      --border: rgba(36, 84, 58, 0.14);
+      --shadow: 0 24px 60px rgba(20, 57, 39, 0.16);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      margin: 0;
+      overflow-x: hidden;
+    }
+
+    body {
+      min-height: 100vh;
+      font-family: "Poppins", sans-serif;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at top left, rgba(223, 234, 221, 0.95), transparent 32%),
+        linear-gradient(180deg, #eef5ec 0%, #f7f4ec 52%, #eef2ea 100%);
+    }
+
+    .page {
+      width: min(1280px, calc(100% - 2rem));
+      margin: 0 auto;
+      padding: 2rem 0 3rem;
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      min-height: 225px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 1.8rem 1.75rem;
+      border: 1px solid rgba(255, 255, 255, 0.35);
+      border-radius: 28px;
+      background:
+        linear-gradient(135deg, rgba(78, 0, 0, 0.97), rgba(115, 0, 0, 0.92)),
+        linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0));
+      box-shadow: var(--shadow);
+      color: #fff;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: auto -10% -18% auto;
+      width: 320px;
+      height: 320px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(223, 234, 221, 0.24), transparent 66%);
+      pointer-events: none;
+    }
+
+    .brand {
+      position: relative;
+      width: min(100%, 860px);
+      z-index: 1;
+    }
+
+    .brand img {
+      width: 100%;
+      height: auto;
+      display: block;
+      filter: drop-shadow(0 10px 22px rgba(0, 0, 0, 0.16));
+    }
+
+    .panel {
+      margin-top: 1.5rem;
+      padding: 1.7rem 1.25rem 1.25rem;
+      border-radius: 24px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(10px);
+    }
+
+    .panel-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .panel h2 {
+      margin: 0;
+      font-size: clamp(1.45rem, 2.4vw, 2rem);
+      font-weight: 600;
+      color: #000;
+    }
+
+    .report-shell {
+      overflow: hidden;
+      display: block;
+      border-radius: 18px;
+      border: 1px solid rgba(36, 84, 58, 0.1);
+      background: #fff;
+      width: min(100%, 1250px);
+      margin: 0 auto;
+    }
+
+    .report-shell iframe {
+      width: 100%;
+      height: 1050px;
+      border: 0;
+      display: block;
+    }
+
+    @media (max-width: 720px) {
+      .page {
+        width: min(100% - 1rem, 100%);
+        padding-top: 0.75rem;
+      }
+
+      .hero {
+        min-height: 0;
+        padding: 1.25rem 1.1rem;
+        border-radius: 22px;
+      }
+
+      .brand {
+        width: min(100%, 360px);
+      }
+
+      .brand img {
+        width: 100%;
+        height: auto;
+      }
+
+      .panel {
+        padding: 1.15rem 0.85rem 0.85rem;
+        border-radius: 20px;
+      }
+
+      .report-shell iframe {
+        height: 1050px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <section class="hero">
+      <div class="brand">
+        <img
+          src="./fpclogo_site.png"
+          alt="Forest Productivity Cooperative logo"
+        >
+      </div>
+    </section>
+
+    <section class="panel" aria-labelledby="report-title">
+      <div class="panel-head">
+        <h2 id="report-title">Research Summary Catalog</h2>
+      </div>
+
+      <div class="report-shell">
+        <iframe
+          width="1250"
+          height="1750"
+          title="FPC Research Summaries Looker Studio Report"
+          src="https://datastudio.google.com/embed/reporting/a63d4365-680a-4d17-86e0-943f1402d959/page/JUnFF"
+          frameborder="0"
+          style="border:0"
+          scrolling="no"
+          allowfullscreen
+          sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"
+        ></iframe>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
